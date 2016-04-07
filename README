@@ -1,0 +1,4 @@
+wildfly 10.0.0
+Java 8
+liquibase 3.4.2
+postgres 9.5
