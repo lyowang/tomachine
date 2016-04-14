@@ -15,7 +15,7 @@
         <changeLogFile>src/main/resources/liquibase/changelog.xml</changeLogFile>
         <db.server>localhost</db.server>
         <db.port>5432</db.port>
-        <db.name>tomachine</db.name>
+        <db.name>tomachine_data</db.name>
         <db.username>postgres</db.username>
         <db.password>1111</db.password>
         <db.url>jdbc:postgres://${db.server}:${db.port}/${db.name}?characterEncoding=UTF-8&amp;allowMultiQueries=true

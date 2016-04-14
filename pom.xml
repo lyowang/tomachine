@@ -14,7 +14,21 @@
         <module>tomachine-api</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>repo</id>
+            <name>central repo</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
     <properties>
+        <springframework.version>4.3.0.RELEASE</springframework.version>
+        <hibernate.version>4.3.6.Final</hibernate.version>
+        <mysql.connector.version>5.1.31</mysql.connector.version>
+        <joda-time.version>2.3</joda-time.version>
+        <testng.version>6.9.4</testng.version>
+        <mockito.version>1.10.19</mockito.version>
     </properties>
 
 
@@ -26,45 +40,29 @@
                 <version>6.0</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.6.6</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>1.6.6</version>
-            </dependency>
-
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-library</artifactId>
-                <version>1.3</version>
-                <scope>test</scope>
-            </dependency>
-
+            <!-- Testing dependencies -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>${spring.version}</version>
+                <version>${springframework.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <plugins>
-
-        </plugins>
     </build>
 
 </project>
