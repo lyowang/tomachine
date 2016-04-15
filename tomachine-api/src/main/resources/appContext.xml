@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="org.codingpedia.demo.rest.*" />
+    <context:component-scan base-package="com.tomachine.*" />
 
     <!-- ************ JPA configuration *********** -->
     <tx:annotation-driven transaction-manager="transactionManager" />
@@ -22,7 +22,7 @@
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceXmlLocation" value="classpath:config/persistence-demo.xml" />
         <property name="dataSource" ref="restDemoDS" />
-        <property name="packagesToScan" value="org.codingpedia.demo.*" />
+        <property name="packagesToScan" value="com.tomachine.*" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="showSql" value="true" />
